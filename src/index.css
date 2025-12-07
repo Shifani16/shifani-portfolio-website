@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+    --color-blue-primary: #212930;
+    --color-blue-secondary: #1A2025;
+    --color-blue-light: #425260;
+
+    --color-yellow-primary: #D4C9A8;
+    --color-yellow-light: #ECDFBB;
+    --color-yellow-dark:#8E8670;
+}
+
+/* --------------------------- */
+/* 🌟 FALLING STARS */
+/* --------------------------- */
+.falling-star {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  background: #fff8c5;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #fff8c5;
+  opacity: 0.8;
+  animation-name: starFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes starFall {
+  0% {
+    transform: translateY(-10px) translateX(0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) translateX(20px);
+    opacity: 0.2;
+  }
+}
+
+
