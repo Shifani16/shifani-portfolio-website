@@ -14,7 +14,7 @@ export function WindowFrame({ children }: WindowFrameProps) {
   const getHeaderTitle = (pathname: string) => {
     switch (pathname) {
       case "/":
-        return "HERO / NAV / 01";
+        return "HERO / 01";
         break;
       case "/about":
       case "/work":
