@@ -24,7 +24,7 @@ export default function MusicToggle() {
     return (
         <button
         onClick={toggleMusic}
-        className="fixed cursor-pointer top-20 right-3 md:top-15 md:right-10 z-50 p-4 rounded-full bg-pink-400 text-neutral-300 shadow-xl hover:bg-pink-800/80 transition-all"
+        className="fixed cursor-pointer top-15 right-3 md:top-15 md:right-10 z-50 p-4 rounded-full bg-pink-400 text-neutral-300 shadow-xl hover:bg-pink-800/80 transition-all"
         >
             {isPlaying ? <Volume2 /> : <VolumeX/>}
         </button>
