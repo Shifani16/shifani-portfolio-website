@@ -7,10 +7,31 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import { WindowFrame } from "./components/WindowFrame";
 import Navigation from "./components/Navigation";
+import Intro from "./components/intro";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    if(showIntro) {
+      document.body.style.overflow = "hidden";
+    }
+
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+    }, 2800);
+
+    return () => {
+      clearTimeout(timer);
+
+      document.body.style.overflow = "unset";
+    };
+  }, [showIntro]);
+
   return (
     <BrowserRouter>
+    {showIntro && <Intro></Intro>}
       <div>
         <Background />
 

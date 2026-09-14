@@ -14,7 +14,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden relative">
+    <section className="min-h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden relative p-2 md:p-0">
       <div className="md:absolute flex items-center justify-center z-10 md:py-0 py-20" id="nav">
         <div className="absolute w-screen h-screen flex items-center justify-center pointer-events-none -z-10 overflow-visible">
           <Ripple numCircles={4} />
@@ -30,7 +30,7 @@ export default function Navigation() {
       </div>
 
       {/* MOBILE VIEW */}
-      <div className="flex flex-col gap-4 w-full max-w-sm z-20 my-2 md:hidden px-2">
+      <div className="flex flex-col gap-4 w-full max-w-sm z-20 md:hidden px-2">
         <a
           href="/about"
           className="block border-l-4 border-pink-500 w-full shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"

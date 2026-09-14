@@ -27,8 +27,8 @@ export function WindowFrame({ children }: WindowFrameProps) {
     }    
   }
   return (
-    <div className="min-h-screen w-full p-4 md:p-6 flex items-center justify-center">
-      <div className="relative w-full max-w-7xl h-[92vh] bg-[#f8f7fc]/90 backdrop-blur-md border border-neutral-300/60 rounded-2xl shadow-2xl overflow-hidden flex flex-col text-neutral-800">
+    <div className="min-h-screen w-full p-2 pt-5 md:p-6 flex items-center justify-center">
+      <div className="relative w-full max-w-7xl h-screen md:h-[92vh] bg-[#f8f7fc]/90 backdrop-blur-md border border-neutral-300/60 rounded-2xl shadow-2xl overflow-hidden flex flex-col text-neutral-800">
         <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200/60 text-xs tracking-widest text-neutral-500 uppercase font-mono">
           <span>MY PORTFOLIO'S LOG</span>
           <span>{getHeaderTitle(location.pathname)}</span>
