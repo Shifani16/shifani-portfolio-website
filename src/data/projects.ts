@@ -1,6 +1,14 @@
 export const projects = [
   {
     id: 1,
+    title: "Satsugekka Project",
+    date: "14 March - 13 September 2026",
+    desc: "Personal website for my personal blog and translation work that I did as my personal hobby. Build with React, tailwindCSS, and Typescript",
+    image: "/images/satsugekka.png",
+    category: "Website",
+  },
+  {
+    id: 2,
     title:
       "Website Informasi Dinas Komunikasi dan Informatika Kabupaten Malang",
     date: "19 August - 31 October 2025",
@@ -9,7 +17,7 @@ export const projects = [
     category: "Website",
   },
   {
-    id: 2,
+    id: 3,
     title: "OccuHelp",
     date: "13 February - 20 June 2025",
     desc: "Capstone Project focused on improving hospital system management. Acted as a Backend Developer managing the database and APIs, and as a Frontend Developer integrating APIs and data into the website display. The framework used is Laravel.",
@@ -17,7 +25,7 @@ export const projects = [
     category: "Website",
   },
   {
-    id: 3,
+    id: 4,
     title: "Brekkie",
     date: "15 September - 19 December 2024",
     desc: "Project focused on a service application for serving breakfast and diets, and providing healthy recipe information. Acted as the leader and main developer, integrating application logic and design. The framework used is Jetpack Compose.",
@@ -25,7 +33,7 @@ export const projects = [
     category: "Mobile",
   },
   {
-    id: 4,
+    id: 5,
     title: "Website Informasi Kost Danaras",
     date: "22 February - 28 June 2024",
     desc: "Project for a boarding house management system capable of managing data for tenants. Acted as a Frontend Developer and UI designer, designing the website interface and managing the database system. The framework used is Laravel.",
@@ -33,7 +41,7 @@ export const projects = [
     category: "Website",
   },
   {
-    id: 5,
+    id: 6,
     title: "LesTour",
     date: "31 August - 11 November 2023",
     desc: "Website project about a tourism booking system. Used vanilla HTML, CSS, and JavaScript.",
@@ -41,7 +49,7 @@ export const projects = [
     category: "Website",
   },
   {
-    id: 6,
+    id: 7,
     title: "Shattered Echoes",
     date: "24 August - 09 September 2024",
     desc: "A simple platformer game that focused in puzzle solving game to accomplish goal. Participated as game artist and created the whole game art assets",
@@ -49,7 +57,7 @@ export const projects = [
     category: "Misc.",
   },
   {
-    id: 7,
+    id: 8,
     title: "Auditor's Manager",
     date: "01 August - 12 December 2023",
     desc: "A simple database management GUI project that capable of doing CRUD system",
@@ -57,7 +65,15 @@ export const projects = [
     category: "Misc.",
   },
   {
-    id: 8,
+    id: 9,
+    title: "Content-based Game Recommendation System on the Steam Platform Using TF-IDF and Word2Vec",
+    date: "02 September 2025 - 01 Januari 2026",
+    desc: "A project to build game recommendation system using Steam data as the data basis and using Natural Language Processing to create recommendation system based on title input.",
+    image: "/images/skrip.png",
+    category: "Data",
+  },
+  {
+    id: 10,
     title: "Toxic Comments Classification",
     date: "25 October - 29 November 2024",
     desc: "A machine learning project that compares the performance of two algorithms for classification of toxic comments.",
@@ -65,11 +81,12 @@ export const projects = [
     category: "Data",
   },
   {
-    id: 9,
+    id: 11,
     title: "Sentiment Analysis of Financial News using SVM Algorithm",
     date: "25 October - 29 November 2024",
     desc: "A Natural Language Processing project that classificate the sentiment of financial news data.",
     image: "/images/sentiment.png",
     category: "Data",
   },
+  
 ];

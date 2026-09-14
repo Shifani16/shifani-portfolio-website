@@ -1,12 +1,20 @@
 import FadeUp from "../anim/FadeUp";
+import { SparklesText } from "./ui/sparkles-text";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 px-10 md:px-20">
+    <section id="about" className="relative py-5 px-5 md:px-20">
       <FadeUp delay={0.1}>
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] items-center">
+        <div className="border-b border-neutral-300 pb-2 w-full">
+          <SparklesText sparklesCount={5}>
+            <h1 className="font-mono tracking-widest text-4xl leading-none">
+              ABOUT
+            </h1>
+          </SparklesText>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] items-center mt-10 md:mt-0">
           <div>
-            <p className="text-white pt-15">
+            <p className="text-neutral-600 font-mono tracking-tight">
               Hi, I’m Vani! I’m currently an Informatics Engineering
               undergraduate at Brawijaya University. I enjoy anime, manga, art,
               games, and entertainment media in general. I also love tinkering
@@ -18,22 +26,31 @@ export default function About() {
               feel free to contact me or check out my CV below!
             </p>
           </div>
-
-          <div className="flex justify-center md:justify-end mt-20">
-            <img src="/images/ABOUT.png" alt="about-title" className="h-32" />
-          </div>
+          <img src="/images/butterfly.png" alt="about" className="md:w-full" />
         </div>
       </FadeUp>
 
       <FadeUp delay={0.2}>
-        <div className="flex justify-center mt-10">
-          <a
-            target="_blank"
-            href="https://drive.google.com/drive/folders/1C2FlOg0yFck7xYNHsL8ns4hiRKJmBWLB?usp=drive_link"
-            className="px-6 py-3 bg-blue-light text-white font-semibold hover:bg-blue-secondary cursor-pointer rounded"
-          >
-            Download My CV
-          </a>
+        <div className="flex flex-row justify-center gap-5">
+          <div className="flex justify-center mt-10">
+            <a
+              target="_blank"
+              href="https://drive.google.com/drive/folders/1C2FlOg0yFck7xYNHsL8ns4hiRKJmBWLB?usp=drive_link"
+              className="px-6 py-3 rounded-full border border-white/20 bg-neutral-800 text-sm font-semibold text-white backdrop-blur-md hover:bg-neutral-800/90 transition"
+            >
+              Download My CV
+            </a>
+          </div>
+
+          <div className="flex justify-center mt-10">
+            <a
+              target="_blank"
+              href="https://satsugekka-project.vercel.app/"
+              className="px-6 py-3 rounded-full border border-neutral-800 bg-neutral-100 text-sm font-semibold text-neutral-800 backdrop-blur-md hover:bg-neutral-100/90 transition"
+            >
+              Blog and Hobby
+            </a>
+          </div>
         </div>
       </FadeUp>
     </section>

@@ -1,87 +1,79 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import FadeUp from "../anim/FadeUp";
+// src/components/Hero.tsx
+import { motion } from "framer-motion";
+import { SparklesText } from "./ui/sparkles-text";
+import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
 
-export default function Hero() {
-  const roles = [
-    "Website Developer",
-    "Mobile Developer",
-    "Data Scientist",
-    "Artist",
-    "Designer",
-  ];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % roles.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
+export function Hero() {
   return (
-    <section
-      id="home"
-      className="relative grid grid-cols-1 md:grid-cols-2 items-center"
-    >
-      <FadeUp delay={0.1}>
-        <div className="px-10 md:px-20 py-10 md:py-20 z-10">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white">
-            Hello, <span className="text-yellow-primary">Vani</span> here!
-            <br />
-            and I’m a <br />
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={roles[index]}
-                initial={{ y: 40, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -40, opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-block text-yellow-primary"
-              >
-                {roles[index]}
-              </motion.span>
-            </AnimatePresence>
+    <section className="relative h-full flex flex-col text-center items-center justify-center py-5 px-6 md:px-20 overflow-hidden">
+      <div className="hidden md:block absolute inset-0 z-0 overflow-hidden opacity-25 pointer-events-none">
+        <InteractiveGridPattern
+          squares={[40, 40]}
+          className="w-full h-full transform rotate-12 scale-150 stroke-neutral-400/30"
+          squaresClassName="pointer-events-auto hover:!fill-pink-500/80"
+        />
+      </div>
+
+      <div className="absolute inset-0 z-0 overflow-hidden opacity-25 pointer-events-none md:hidden">
+        <AnimatedGridPattern
+        numSquares={10}
+        className="w-full h-full transform rotate-12 scale-150 stroke-neutral-400/30"
+         />
+
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 max-w-xl space-y-6 flex flex-col items-center"
+      >
+        <SparklesText>
+          <h1 className="text-6xl lg:text-8xl font-extrabold tracking-tight text-neutral-600 font-serif italic mt-12">
+            Shifani's{" "}
+            <span className="font-silkscreen not-italic font-light text-pink-500">
+              <br className="mb-2" />
+              LOG
+            </span>
           </h1>
+        </SparklesText>
 
-          <p className="mt-4text-gray-300 max-w-md">
-            A programmer based in Indonesia — always eager to learn.
-          </p>
+        <p className="text-sm md:text-lg text-neutral-600 leading-relaxed">
+          Here's you gonna find my track and journey as aspiring developer who
+          wishes to become a full-fledged software engineer.
+        </p>
 
+        <div className="flex flex-col md:flex-row gap-4 pt-2 justify-center">
           <a
-            href="#about"
-            className="mt-6 inline-block px-6 py-3 bg-yellow-primary text-blue-secondary hover:bg-yellow-dark hover:text-white font-semibold rounded"
+            href="#nav"
+            className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white hover:bg-neutral-800 transition shadow-sm"
           >
-            About Me
+            Explore →
+          </a>
+          <a
+            href="/contact"
+            className="rounded-full border border-neutral-300 bg-white/50 px-6 py-3 text-sm font-semibold text-neutral-800 backdrop-blur-md hover:bg-white/80 transition"
+          >
+            Contact Me
           </a>
         </div>
-      </FadeUp>
-
-      <FadeUp delay={0.2}>
-        <div className="flex justify-end mt-10 md:mt-0 z-10">
-          <img
-            src="/images/shifani.png"
-            alt="illustration"
-            className="w-[400px] sm:w-[420px] md:w-[450px] lg:w-[550px]"
-          />
-        </div>
-      </FadeUp>
-
-      <FadeUp delay={0.3}>
-        <img
-          src="/images/laurel_1.png"
-          alt="laurel-decoration"
-          className="
-          absolute
-          -bottom-30
-          md:-bottom-50
-          left-0 
-          w-full 
-          max-w-[800px] 
-          pointer-events-none
-        "
-        />
-      </FadeUp>
+      </motion.div>
+      <div className="absolute bottom-6 right-6 z-20 flex flex-col items-center text-xs tracking-widest text-neutral-400 font-mono select-none pointer-events-none">
+        <span className="opacity-50">|</span>
+        <span className="opacity-75">|</span>
+        <span>|</span>
+        <span>S</span>
+        <span>C</span>
+        <span>R</span>
+        <span>O</span>
+        <span>L</span>
+        <span>L</span>
+        <span><i className="bi bi-arrow-down"></i></span>
+        
+      </div>
     </section>
   );
 }
+
+export default Hero;
