@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import { WindowFrame } from "./components/WindowFrame";
 import Navigation from "./components/Navigation";
-import Intro from "./components/intro";
+import Intro from "./components/Intro";
 import { useEffect, useState } from "react";
 
 function App() {
