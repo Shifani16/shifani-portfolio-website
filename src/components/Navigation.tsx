@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { HyperText } from "@/components/ui/hyper-text";
 import { Ripple } from "@/components/ui/ripple";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const [animationKey, setAnimationKey] = useState(0);
@@ -15,7 +16,10 @@ export default function Navigation() {
 
   return (
     <section className="min-h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden relative p-2 md:p-0">
-      <div className="md:absolute flex items-center justify-center z-10 md:py-0 py-20" id="nav">
+      <div
+        className="md:absolute flex items-center justify-center z-10 md:py-0 py-20"
+        id="nav"
+      >
         <div className="absolute w-screen h-screen flex items-center justify-center pointer-events-none -z-10 overflow-visible">
           <Ripple numCircles={4} />
         </div>
@@ -31,8 +35,8 @@ export default function Navigation() {
 
       {/* MOBILE VIEW */}
       <div className="flex flex-col gap-4 w-full max-w-sm z-20 md:hidden px-2">
-        <a
-          href="/about"
+        <Link
+          to="/about"
           className="block border-l-4 border-pink-500 w-full shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
         >
           <span className="text-xl font-silkscreen text-pink-500 group-hover:text-pink-800 transition block">
@@ -41,10 +45,10 @@ export default function Navigation() {
           <p className="font-mono text-xs text-neutral-600">
             About me, this website, and my resume you can read to know me.
           </p>
-        </a>
+        </Link>
 
-        <a
-          href="/work"
+        <Link
+          to="/work"
           className="block border-l-4 border-purple-500 w-full shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
         >
           <span className="text-xl font-silkscreen text-purple-500 group-hover:text-purple-800 transition block">
@@ -53,10 +57,10 @@ export default function Navigation() {
           <p className="font-mono text-xs text-neutral-600 mt-1">
             Contains my personal projects and work i did before.
           </p>
-        </a>
+        </Link>
 
-        <a
-          href="/skills"
+        <Link
+          to="/skills"
           className="block border-l-4 border-blue-500 w-full shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
         >
           <span className="text-xl font-silkscreen text-blue-500 group-hover:text-blue-800 transition block">
@@ -65,10 +69,10 @@ export default function Navigation() {
           <p className="font-mono text-xs text-neutral-600 mt-1">
             What I've learned and what I can do, my skillset and knowledge.
           </p>
-        </a>
+        </Link>
 
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="block border-l-4 border-teal-500 w-full shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
         >
           <span className="text-xl font-silkscreen text-teal-500 group-hover:text-teal-800 transition block">
@@ -77,14 +81,14 @@ export default function Navigation() {
           <p className="font-mono text-xs text-neutral-600 mt-1">
             To reach me out. I'll be happy to work with you.
           </p>
-        </a>
+        </Link>
       </div>
 
       {/* DESKTOP VIEW */}
       <div className="hidden md:block">
         <div className="absolute left-25 -translate-y-40 justify-start transition">
-          <a
-            href="/about"
+          <Link
+            to="/about"
             id="about"
             className="block border-l-4 border-pink-500 w-2/3 shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
           >
@@ -94,12 +98,12 @@ export default function Navigation() {
             <p className="font-mono text-xs text-neutral-600 mt-1">
               About me, this website, and my resume you can read to know me.
             </p>
-          </a>
+          </Link>
         </div>
 
         <div className="absolute items-center -translate-x-90 translate-y-30 justify-start">
-          <a
-            href="/work"
+          <Link
+            to="/work"
             id="work"
             className="block border-l-4 border-purple-500 w-2/3 shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
           >
@@ -109,12 +113,12 @@ export default function Navigation() {
             <p className="font-mono text-xs text-neutral-600 mt-1">
               Contains my personal projects and work i did before.
             </p>
-          </a>
+          </Link>
         </div>
 
         <div className="absolute items-center translate-x-50 translate-y-45 justify-start">
-          <a
-            href="/skills"
+          <Link
+            to="/skills"
             id="skills"
             className="block border-l-4 border-blue-500 w-2/3 shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
           >
@@ -124,12 +128,12 @@ export default function Navigation() {
             <p className="font-mono text-xs text-neutral-600 mt-1">
               What I've learned and what I can do, my skillset and knowledge.
             </p>
-          </a>
+          </Link>
         </div>
 
         <div className="absolute translate-x-70 -translate-y-30 justify-start">
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             id="contact"
             className="block border-l-4 border-teal-500 w-2/3 shadow-lg bg-neutral-300/10 px-4 py-4 rounded-lg hover:scale-105 hover:bg-neutral-500/10 transition cursor-pointer group"
           >
@@ -139,7 +143,7 @@ export default function Navigation() {
             <p className="font-mono text-xs text-neutral-600 mt-1">
               To reach me out. I'll be happy to work with you.
             </p>
-          </a>
+          </Link>
         </div>
       </div>
 
