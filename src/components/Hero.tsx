@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { SparklesText } from "./ui/sparkles-text";
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
-import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import Disclaimer from "./Disclaimer";
 
 export function Hero() {
   return (
@@ -17,10 +18,9 @@ export function Hero() {
 
       <div className="absolute inset-0 z-0 overflow-hidden opacity-25 pointer-events-none md:hidden">
         <AnimatedGridPattern
-        numSquares={10}
-        className="w-full h-full transform rotate-12 scale-150 stroke-neutral-400/30"
-         />
-
+          numSquares={10}
+          className="w-full h-full transform rotate-12 scale-150 stroke-neutral-400/30"
+        />
       </div>
 
       <motion.div
@@ -69,8 +69,13 @@ export function Hero() {
         <span>O</span>
         <span>L</span>
         <span>L</span>
-        <span><i className="bi bi-arrow-down"></i></span>
-        
+        <span>
+          <i className="bi bi-arrow-down"></i>
+        </span>
+      </div>
+
+      <div className="md:hidden absolute bottom-10 z-10 w-full px-4">
+        <Disclaimer />
       </div>
     </section>
   );
