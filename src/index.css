@@ -5,6 +5,37 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes float-circle {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(6px, -8px);
+  }
+  50% {
+    transform: translate(0px, -14px);
+  }
+  75% {
+    transform: translate(-6px, -8px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.animate-orbit-1 {
+  animation: float-circle 8s ease-in-out infinite;
+}
+.animate-orbit-2 {
+  animation: float-circle 9s ease-in-out infinite 2s;
+}
+.animate-orbit-3 {
+  animation: float-circle 7s ease-in-out infinite 1s;
+}
+.animate-orbit-4 {
+  animation: float-circle 10s ease-in-out infinite 3s;
+}
+
 @font-face {
   font-family: 'Silkscreen';
   src: url('./assets/fonts/Silkscreen-Regular.ttf') format('truetype');

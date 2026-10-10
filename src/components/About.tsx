@@ -15,15 +15,16 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] items-center mt-10 md:mt-0">
           <div>
             <p className="text-neutral-600 font-mono tracking-tight text-xs md:text-lg">
-              Hi, I’m Vani! I’m currently an Informatics Engineering
-              undergraduate at Brawijaya University. I enjoy anime, manga, art,
-              games, and entertainment media in general. I also love tinkering
-              with things on the internet and figuring out how they work behind
-              the scenes. I’m always excited to learn new things, expand my
-              experience, and try working on different kinds of projects. I’m a
-              disciplined and hard-working person, especially when it comes to
-              the projects I’m involved in. If you’d like to know more about me,
-              feel free to contact me or check out my CV below!
+              Hi, I’m Vani! I’m currently an Informatics Engineering fresh
+              graduate that looking for job experience. I enjoy anime, manga,
+              art, games, and entertainment media in general. I also love
+              tinkering with things on the internet and figuring out how they
+              work behind the scenes. I’m always excited to learn new things,
+              expand my experience, and try working on different kinds of
+              projects. I’m a disciplined and hard-working person, especially
+              when it comes to the projects I’m involved in. If you’d like to
+              know more about me, feel free to contact me or check out my CV
+              below!
             </p>
           </div>
           <img src="/images/butterfly.png" alt="about" className="md:w-full" />

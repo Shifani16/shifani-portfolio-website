@@ -52,10 +52,11 @@ export function Hero() {
             Explore →
           </a>
           <a
-            href="/contact"
+            target="_blank"
+            href="https://drive.google.com/drive/folders/1C2FlOg0yFck7xYNHsL8ns4hiRKJmBWLB?usp=drive_link"
             className="rounded-full border border-neutral-300 bg-white/50 px-6 py-3 text-sm font-semibold text-neutral-800 backdrop-blur-md hover:bg-white/80 transition"
           >
-            Contact Me
+            My Resume
           </a>
         </div>
       </motion.div>

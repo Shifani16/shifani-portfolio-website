@@ -86,7 +86,7 @@ export default function Navigation() {
 
       {/* DESKTOP VIEW */}
       <div className="hidden md:block">
-        <div className="absolute left-25 -translate-y-40 justify-start transition">
+        <div className="absolute left-25 -translate-y-40 justify-start transition animate-orbit-1">
           <Link
             to="/about"
             id="about"
@@ -101,7 +101,7 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <div className="absolute items-center -translate-x-90 translate-y-30 justify-start">
+        <div className="absolute items-center -translate-x-90 translate-y-30 justify-start animate-orbit-2">
           <Link
             to="/work"
             id="work"
@@ -116,7 +116,7 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <div className="absolute items-center translate-x-50 translate-y-45 justify-start">
+        <div className="absolute items-center translate-x-50 translate-y-45 justify-start animate-orbit-3">
           <Link
             to="/skills"
             id="skills"
@@ -131,7 +131,7 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <div className="absolute translate-x-70 -translate-y-30 justify-start">
+        <div className="absolute translate-x-70 -translate-y-30 justify-start animate-orbit-4">
           <Link
             to="/contact"
             id="contact"

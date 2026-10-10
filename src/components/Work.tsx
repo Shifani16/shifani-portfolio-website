@@ -25,7 +25,9 @@ export default function Work() {
               </SparklesText>
             </div>
 
-            <p className="text-neutral-500 text-xs mt-3 md:mt-15 font-mono ">Here what I've worked on!</p>
+            <p className="text-neutral-500 text-xs mt-3 md:mt-15 font-mono ">
+              Here what I've worked on!
+            </p>
           </div>
 
           {/* Responsive Tabs */}
@@ -42,11 +44,7 @@ export default function Work() {
                       ? "bg-pink-600 text-neutral-100 shadow-lg"
                       : "text-gray-400 hover:text-white"
                   }
-                  ${
-                    i !== tabs.length
-                      ? "border-r-2 border-neutral-300/60"
-                      : ""
-                  }
+                  ${i !== tabs.length ? "border-r-2 border-neutral-300/60" : ""}
                 `}
                 >
                   {tab}
@@ -74,6 +72,18 @@ export default function Work() {
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {project.desc}
                   </p>
+                  <div className="flex gap-5 text-sm mt-5 font-bold">
+                    {project.link && (
+                      <a href={project.link} target="_blank" className="px-4 py-2 bg-pink-600 text-white rounded-sm hover:bg-white hover:border hover:border-black hover:text-black">
+                        Link
+                      </a>
+                    )}
+                    {project.github && (
+                      <a href={project.github} target="_blank" className="px-3 py-2 border border-black rounded-sm hover:bg-black hover:text-white">
+                        Github <i className="ri-arrow-right-up-line"></i>
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {/* Image */}
