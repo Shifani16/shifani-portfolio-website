@@ -53,7 +53,7 @@ export function Hero() {
           </a>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1tTmIYYvMJolmKYDxZNm_JMnDfuJq-VjJ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1KVa62i0RafXhZMddYwrudjijcJ5XQzVJ/view?usp=drive_link"
             className="rounded-full border border-neutral-300 bg-white/50 px-6 py-3 text-sm font-semibold text-neutral-800 backdrop-blur-md hover:bg-white/80 transition"
           >
             My Resume
