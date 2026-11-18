@@ -36,16 +36,6 @@ export default function About() {
           <div className="flex justify-center mt-10">
             <a
               target="_blank"
-              href="https://drive.google.com/drive/folders/1C2FlOg0yFck7xYNHsL8ns4hiRKJmBWLB?usp=drive_link"
-              className="px-6 py-3 rounded-md md:rounded-full border border-white/20 bg-neutral-800 text-sm font-semibold text-white backdrop-blur-md hover:bg-neutral-800/90 transition"
-            >
-              Download My CV
-            </a>
-          </div>
-
-          <div className="flex justify-center mt-10">
-            <a
-              target="_blank"
               href="https://satsugekka-project.vercel.app/"
               className="px-6 py-3 rounded-md md:rounded-full border border-neutral-800 bg-neutral-100 text-sm font-semibold text-neutral-800 backdrop-blur-md hover:bg-neutral-100/90 transition"
             >
